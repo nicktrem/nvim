@@ -22,6 +22,9 @@ local plugins = {
         "pyright",
         "mypy",
         "ruff",
+
+        "shellcheck",
+        "shfmt",
       },
     },
   },
