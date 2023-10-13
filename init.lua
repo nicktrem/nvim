@@ -23,3 +23,5 @@ require "plugins"
 -- For editing what the cursor looks like. 
 -- This setting is for the vertical bar
 vim.opt.guicursor = "n-v-c-i:ver20"
+
+require('base46').toggle_transparency()
