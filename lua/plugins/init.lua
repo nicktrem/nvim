@@ -17,6 +17,10 @@ local default_plugins = {
     branch = "v2.0",
     lazy = false,
   },
+  {
+    "github/copilot.vim",
+    lazy = false,
+  },
 
   {
     "NvChad/nvterm",
