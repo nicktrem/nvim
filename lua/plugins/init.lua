@@ -232,6 +232,14 @@ local default_plugins = {
   },
 
   {
+   "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+    lazy=false,
+  },
+  {
     "nvim-telescope/telescope.nvim",
     dependencies = "nvim-treesitter/nvim-treesitter",
     cmd = "Telescope",
