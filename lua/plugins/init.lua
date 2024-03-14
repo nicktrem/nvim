@@ -18,6 +18,9 @@ local default_plugins = {
     lazy = false,
   },
   {
+    "catppuccin/nvim"
+  },
+  {
     "github/copilot.vim",
     lazy = false,
   },
@@ -259,6 +262,7 @@ local default_plugins = {
         telescope.load_extension(ext)
       end
     end,
+    lazy=false,
   },
 
   -- Only load whichkey after all the gui
