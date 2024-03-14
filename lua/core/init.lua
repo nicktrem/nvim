@@ -56,6 +56,10 @@ opt.whichwrap:append "<>[]hl"
 
 g.mapleader = " "
 
+-------------------------------------- global keymap ------------------------------------------
+-- when deleting a character, do not add it to the clipboard
+vim.keymap.set("n", "x", '"_x')
+
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
   vim.g["loaded_" .. provider .. "_provider"] = 0
