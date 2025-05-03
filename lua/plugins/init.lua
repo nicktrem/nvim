@@ -265,6 +265,12 @@ local default_plugins = {
     lazy=false,
   },
 
+  {
+    'mrcjkb/rustaceanvim',
+    version = '^5',
+    lazy = false,
+  },
+
   -- Only load whichkey after all the gui
   {
     "folke/which-key.nvim",
