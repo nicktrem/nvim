@@ -16,3 +16,15 @@ lspconfig.pyright.setup({
   capabilities = capabilities,
   filetypes = {"python"},
 })
+
+lspconfig.solidity_ls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = {"solidity"},
+})
+
+lspconfig.ts_ls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = {"typescript"},
+})
