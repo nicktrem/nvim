@@ -2,29 +2,31 @@ local base = require("plugins.configs.lspconfig")
 local on_attach = base.on_attach
 local capabilities = base.capabilities
 
-local lspconfig = require("lspconfig")
-
-lspconfig.clangd.setup {
+vim.lsp.config("clangd", {
   on_attach = function(client, bufnr)
     client.server_capabilities.signatureHelpProvider = false
     on_attach(client, bufnr)
   end,
-}
+})
+vim.lsp.enable({"clangd"})
 
-lspconfig.pyright.setup({
+vim.lsp.config("pyright", {
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = {"python"},
 })
+vim.lsp.enable({"pyright"})
 
-lspconfig.solidity_ls.setup({
+vim.lsp.config("solidity_ls", {
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = {"solidity"},
 })
+vim.lsp.enable({"solidity"})
 
-lspconfig.ts_ls.setup({
+vim.lsp.config("ts_ls", {
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = {"typescript"},
 })
+vim.lsp.enable({"ts_ls"})
