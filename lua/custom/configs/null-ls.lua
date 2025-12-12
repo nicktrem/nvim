@@ -1,10 +1,10 @@
-local null_ls = require('null-ls')
+local none_ls = require('none-ls')
 
 local opts = {
   sources = {
     -- For Python
-    null_ls.builtins.diagnostics.mypy,
-    null_ls.builtins.diagnostics.ruff,
+    none_ls.builtins.diagnostics.mypy,
+    none_ls.builtins.diagnostics.ruff,
   }
 }
 return opts
