@@ -32,7 +32,9 @@ local plugins = {
   -- For Static Analysis using python
   {
     -- Use the null-ls (The Null Language Server)
-    "jose-elias-alvarez/null-ls.nvim",
+    -- "jose-elias-alvarez/null-ls.nvim",
+    "nvim-lua/plenary.nvim",
+    "nvimtools/none-ls.nvim",
     ft = {"python"},
     opts = function()
       return require "custom.configs.null-ls"
