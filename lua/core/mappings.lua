@@ -16,6 +16,7 @@ M.general = {
   },
 
   n = {
+    ["<leader>tt"] = { "<cmd> terminal <CR>", "Open terminal" },
     ["<Esc>"] = { ":noh <CR>", "Clear highlights" },
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
