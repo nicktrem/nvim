@@ -24,6 +24,14 @@ local default_plugins = {
     "github/copilot.vim",
     lazy = false,
   },
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "nvim-lua/plenary.nvim", branch = "master" },
+    },
+    build = "make tiktoken",
+    lazy = false,
+  },
 
   {
     "NvChad/nvterm",
