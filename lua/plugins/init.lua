@@ -274,10 +274,47 @@ local default_plugins = {
   },
 
   {
-    'mrcjkb/rustaceanvim',
-    version = '^5',
-    lazy = false,
-  },
+  "mrcjkb/rustaceanvim",
+  version = "^8",
+  lazy = false,
+  config = function()
+    vim.g.rustaceanvim = {
+      server = {
+        on_attach = function(_, bufnr)
+
+          local opts = { buffer = bufnr, silent = true }
+
+          -- hover info
+          vim.keymap.set("n", "K", function()
+            vim.cmd.RustLsp("hover", "actions")
+          end, opts)
+
+          -- code actions
+          vim.keymap.set("n", "<leader>a", function()
+            vim.cmd.RustLsp("codeAction")
+          end, opts)
+
+          -- runnables
+          vim.keymap.set("n", "<leader>rr", function()
+            vim.cmd.RustLsp("runnables")
+          end, opts)
+
+          -- debug
+          vim.keymap.set("n", "<leader>rd", function()
+            vim.cmd.RustLsp("debuggables")
+          end, opts)
+
+        end,
+      },
+
+      tools = {
+        hover_actions = {
+          auto_focus = true,
+        },
+      },
+    }
+  end,
+},
 
   -- Only load whichkey after all the gui
   {
