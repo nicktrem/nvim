@@ -11,7 +11,7 @@ g.transparency = config.ui.transparency
 -- for github copilot
 vim.g.copilot_assume_mapped = true
 vim.g.copilot_no_tab_map = true
-vim.api.nvim_set_keymap("i", "<C-N>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 -------------------------------------- options ------------------------------------------
 opt.laststatus = 3 -- global statusline
@@ -66,7 +66,7 @@ for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
 end
 
 -- add binaries installed by mason.nvim to path
-local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
+local is_windows = vim.uv.os_uname().sysname == "Windows_NT"
 vim.env.PATH = vim.fn.stdpath "data" .. "/mason/bin" .. (is_windows and ";" or ":") .. vim.env.PATH
 
 -------------------------------------- autocmds ------------------------------------------

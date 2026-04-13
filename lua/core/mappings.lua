@@ -44,7 +44,7 @@ M.general = {
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
 
     -- new buffer
-    ["<leader>b"] = { "<cmd> enew <CR>", "New buffer" },
+    ["<leader>bn"] = { "<cmd> enew <CR>", "New buffer" },
     ["<leader>ch"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
 
     -- for lazy git
@@ -195,7 +195,7 @@ M.lspconfig = {
       "LSP references",
     },
 
-    ["<leader>f"] = {
+    ["<leader>d"] = {
       function()
         vim.diagnostic.open_float { border = "rounded" }
       end,

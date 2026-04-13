@@ -18,9 +18,6 @@ local default_plugins = {
     lazy = false,
   },
   {
-    "catppuccin/nvim"
-  },
-  {
     "github/copilot.vim",
     lazy = false,
   },
@@ -290,7 +287,7 @@ local default_plugins = {
           end, opts)
 
           -- code actions
-          vim.keymap.set("n", "<leader>a", function()
+          vim.keymap.set("n", "<leader>ca", function()
             vim.cmd.RustLsp("codeAction")
           end, opts)
 

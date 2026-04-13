@@ -23,21 +23,25 @@ local plugins = {
         "mypy",
         "ruff",
 
+        -- For TypeScript
+        "typescript-language-server",
+
+        -- For Solidity
+        "solidity-ls",
+
         "shellcheck",
         "shfmt",
       },
     },
   },
 
-  -- For Static Analysis using python
+  -- For diagnostics and formatting
   {
-    -- Use the null-ls (The Null Language Server)
-    -- "jose-elias-alvarez/null-ls.nvim",
-    "nvim-lua/plenary.nvim",
     "nvimtools/none-ls.nvim",
-    ft = {"python"},
+    dependencies = { "nvim-lua/plenary.nvim" },
+    ft = {"python", "c", "cpp", "sh", "bash"},
     opts = function()
-      return require "custom.configs.none-ls"
+      return require "custom.configs.null-ls"
     end,
   },
 }
